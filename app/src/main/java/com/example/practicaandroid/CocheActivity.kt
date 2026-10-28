@@ -18,7 +18,7 @@ class CocheActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val coche = MainActivity.listaCoches.buscar(idCoche)
+        val coche = MainActivityCoche.listaCoches.buscar(idCoche)
         findViewById<TextView>(R.id.textMarca).text = coche.marca
     }
 }

@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacionlista.datos.ListaMarcaCoche
 
-class MainActivity : AppCompatActivity() {
+class MainActivityCoche : AppCompatActivity() {
 
     companion object {
         val listaCoches = ListaMarcaCoche();
