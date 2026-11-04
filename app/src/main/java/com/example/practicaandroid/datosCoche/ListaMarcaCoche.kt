@@ -21,7 +21,6 @@ class ListaMarcaCoche : RepositorioMarcaCoche {
     override fun buscar(id: Int): MarcasCoche = lista[id]
 
     override fun longitud(): Int {
-        lista.size
-        return TODO("Provide the return value")
+        return lista.size
     }
 }

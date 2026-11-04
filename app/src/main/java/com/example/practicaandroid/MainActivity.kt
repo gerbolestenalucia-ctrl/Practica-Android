@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacionlista.datos.ListaMarcaCoche
 
-class MainActivityCoche : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     companion object {
         val listaCoches = ListaMarcaCoche();
@@ -32,6 +32,11 @@ class MainActivityCoche : AppCompatActivity() {
         findViewById<Button>(R.id.irCoche).setOnClickListener {
             dialogoElegir()
         }
+
+        findViewById<Button>(R.id.bLista).setOnClickListener {
+            val intent = Intent(this, ListaActivity::class.java)
+            startActivity(intent)
+        }
     }
     fun dialogoElegir(){
         val entrada = EditText(this)
@@ -49,7 +54,6 @@ class MainActivityCoche : AppCompatActivity() {
                 intent.putExtra("numero coche", num)
                 startActivity(intent)
             }
-
             .setNegativeButton("Cancelar", null)
             .show()
     }

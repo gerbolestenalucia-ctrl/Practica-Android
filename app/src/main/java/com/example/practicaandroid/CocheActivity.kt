@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aplicacionlista.modelo.MarcasCoche
 
 class CocheActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +21,7 @@ class CocheActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val coche = MainActivityCoche.listaCoches.buscar(idCoche)
+        val coche = MainActivity.listaCoches.buscar(idCoche)
         findViewById<TextView>(R.id.textMarca).text = coche.marca
         val icono = findViewById<ImageView>(R.id.icono)
         val draw = AppCompatResources.getDrawable(this, coche.imagenMarca.imagen)
