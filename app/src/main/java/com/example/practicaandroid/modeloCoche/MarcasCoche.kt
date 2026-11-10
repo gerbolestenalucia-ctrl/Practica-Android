@@ -9,7 +9,7 @@ data class MarcasCoche (
     val numPuertas: String,
     val velocidadMaxima: String,
     val imagenMarca : Marca,
-    var opinion: Int = 0
+    var opinion: Float = 0f
 )
 {
 }

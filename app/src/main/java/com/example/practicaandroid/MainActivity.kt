@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        listaCoches.poblar()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -35,6 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.bLista).setOnClickListener {
             val intent = Intent(this, ListaActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.irCalculadora).setOnClickListener {
+            val intent = Intent(this, MainActivityCalculadora::class.java)
             startActivity(intent)
         }
     }

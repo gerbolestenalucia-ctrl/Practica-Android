@@ -7,9 +7,9 @@
     android:layout_weight="1">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
+        android:id="@+id/icono_pequenno"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
         android:layout_margin="6dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/bmw" />
@@ -35,18 +35,40 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tarjeta_modelo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Modelo" />
+                android:text="Modelo:" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tarjeta_annio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Año fabricación" />
+                android:text="Año Fabricación:" />
+
+            <TextView
+                android:id="@+id/tarjeta_numPuertas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Número Puertas: " />
+
+            <TextView
+                android:id="@+id/tarjeta_velocidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Velocidad máxima:" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numStars="5" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
