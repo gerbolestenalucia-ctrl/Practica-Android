@@ -27,8 +27,21 @@ interface RepositorioMarcaCoche {
         nuevoCoche(
             MarcasCoche("Hyundai", "i20 N", "2021", "5", "230km/h", Marca.HYUNDAI, 4)
         )
-
-
+        nuevoCoche(
+            MarcasCoche("Toyota", "GR Supra", "2020", "3", "250km/h", Marca.TOYOTA, 5)
+        )
+        nuevoCoche(
+            MarcasCoche("Porsche", "911 Carrera", "2022", "3", "293km/h", Marca.PORSCHE, 3)
+        )
+        nuevoCoche(
+            MarcasCoche("Lamborghini", "Huracán EVO", "2021", "2", "325km/h", Marca.LAMBORGHINI, 5)
+        )
+        nuevoCoche(
+            MarcasCoche("Renault", "Clio RS", "2018", "5", "240km/h", Marca.RENAULT, 2)
+        )
+        nuevoCoche(
+            MarcasCoche("Seat", "León Cupra", "2021", "5", "250km/h", Marca.SEAT, 4)
+        )
     }
 
     fun nuevoCoche(c: MarcasCoche)

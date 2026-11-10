@@ -9,5 +9,11 @@ enum class Marca(val imagen: Int) {
     FERRARI(R.drawable.ferrari),
     VOLKSWAGEN(R.drawable.volkswagen),
     FORD(R.drawable.ford),
-    HYUNDAI(R.drawable.hyundai)
+    HYUNDAI(R.drawable.hyundai),
+    TOYOTA(R.drawable.toyota),
+    PORSCHE(R.drawable.porsche),
+    LAMBORGHINI(R.drawable.lamborghini),
+    RENAULT(R.drawable.renault),
+    SEAT(R.drawable.seat)
+
 }
