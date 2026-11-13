@@ -36,7 +36,7 @@ class CocheActivity : AppCompatActivity() {
         val textoModelo = findViewById<TextView>(R.id.textModelo)
         val textoAnio = findViewById<TextView>(R.id.textAnio)
         textoModelo.text = coche.modelo
-        textoAnio.text = coche.añoFabricacion
+        textoAnio.text = coche.añoFabricacion.toString()
         val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
         ratingBar.rating = coche.opinion.toFloat()
     }

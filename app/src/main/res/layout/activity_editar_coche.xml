@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarCocheActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <EditText
+            android:id="@+id/editarMarca"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Marca:"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modelo: "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editarModelo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="modelo" />
+
+        <TextView
+            android:id="@+id/txtAnnio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Año fabricación:"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editarAnnio"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="año fabricación" />
+
+        <TextView
+            android:id="@+id/txtNumPuertas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número puertas:"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editarNumPuertas"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="número puertas" />
+
+        <TextView
+            android:id="@+id/txtVelocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velocidad máxima:"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editarVelocidad"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="velocidad máxima" />
+
+        <TextView
+            android:id="@+id/txtMarcaImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marca Imagen: "
+            android:textSize="16dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/txtOpinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opinion:"
+            android:textSize="16dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5" />
+
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
