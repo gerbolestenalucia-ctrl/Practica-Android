@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversorModedas">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERSOR DE MONEDAS"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/cantidad5"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toTopOf="@+id/cantidad2"
+        app:layout_constraintEnd_toStartOf="@+id/conversor1"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <TextView
+        android:id="@+id/cantidad1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toTopOf="@+id/cantidad2"
+        app:layout_constraintEnd_toStartOf="@+id/conversor1"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <Spinner
+        android:id="@+id/conversor1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/conversor2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintVertical_bias="0.563" />
+
+    <Spinner
+        android:id="@+id/conversor3"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintVertical_bias="0.471" />
+
+    <Spinner
+        android:id="@+id/conversor2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/conversor3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titulo"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/cantidad2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/conversor3"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cantidad"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="104dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toBottomOf="@+id/conversor3"
+        app:layout_constraintEnd_toStartOf="@+id/conversor2"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversor1"
+        app:layout_constraintVertical_bias="0.982" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
