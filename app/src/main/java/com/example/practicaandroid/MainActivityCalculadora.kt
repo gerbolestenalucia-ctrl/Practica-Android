@@ -1,8 +1,10 @@
 package com.example.practicaandroid
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,11 @@ class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
             insets
         }
         resultado = findViewById(R.id.textView)
+
+        findViewById<ImageView>(R.id.atras).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val listaBotones = listOf<Button>(
             findViewById(R.id.bClear),

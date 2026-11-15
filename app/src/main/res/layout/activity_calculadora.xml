@@ -9,16 +9,57 @@
     tools:layout_editor_absoluteX="-3dp"
     tools:layout_editor_absoluteY="48dp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarConversor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3A86FF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/atras"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        app:srcCompat="@drawable/atras" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="CALCULADORA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="16dp"
         android:text="Resultado"
         android:textAlignment="textEnd"
-        android:textSize="34sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/bClear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,12 +67,13 @@
 
     <Button
         android:id="@+id/bClear"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         android:text="C"
         android:backgroundTint="#BDBDBD"
         android:textColor="#000000"
@@ -44,9 +86,10 @@
 
     <Button
         android:id="@+id/bMultiplicacion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
+        android:textSize="20sp"
         android:text="*"
         android:backgroundTint="#FF9800"
         android:textColor="#FFFFFF"
@@ -58,8 +101,9 @@
 
     <Button
         android:id="@+id/bNum6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="6"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -71,8 +115,9 @@
 
     <Button
         android:id="@+id/bComa"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text=","
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -83,9 +128,10 @@
 
     <Button
         android:id="@+id/bDivision"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
+        android:textSize="20sp"
         android:text="/"
         android:backgroundTint="#FF9800"
         android:textColor="#FFFFFF"
@@ -97,8 +143,9 @@
 
     <Button
         android:id="@+id/bNum8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="8"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -109,8 +156,9 @@
 
     <Button
         android:id="@+id/bNum5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="5"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -121,8 +169,9 @@
 
     <Button
         android:id="@+id/bNum3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="3"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -133,11 +182,12 @@
 
     <Button
         android:id="@+id/bSuma"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
+        android:layout_width="80dp"
+        android:layout_height="180dp"
         android:backgroundTint="#FF9800"
+        android:text="+"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/bNum6"
         app:layout_constraintEnd_toEndOf="@+id/bResta"
         app:layout_constraintStart_toStartOf="@+id/bResta"
@@ -146,12 +196,13 @@
 
     <Button
         android:id="@+id/bIgual"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="16dp"
-        android:text="="
         android:backgroundTint="#FF9800"
+        android:text="="
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/bComa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bSuma"
@@ -159,8 +210,9 @@
 
     <Button
         android:id="@+id/bNum9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="9"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -171,8 +223,9 @@
 
     <Button
         android:id="@+id/bNum2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="20sp"
         android:text="2"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -183,12 +236,13 @@
 
     <Button
         android:id="@+id/bResta"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
-        android:text="-"
         android:backgroundTint="#FF9800"
+        android:text="-"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/bMultiplicacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -197,9 +251,10 @@
 
     <Button
         android:id="@+id/bNum7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         android:text="7"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -210,9 +265,10 @@
 
     <Button
         android:id="@+id/bNum4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         android:text="4"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"
@@ -223,12 +279,13 @@
 
     <Button
         android:id="@+id/bNum0"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
-        android:text="0"
         android:backgroundTint="#424242"
+        android:text="0"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bNum2"
         app:layout_constraintStart_toStartOf="@+id/bNum1"
@@ -236,9 +293,10 @@
 
     <Button
         android:id="@+id/bNum1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         android:text="1"
         android:backgroundTint="#424242"
         android:textColor="#FFFFFF"

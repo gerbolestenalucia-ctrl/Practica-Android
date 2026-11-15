@@ -3,6 +3,7 @@ package com.example.practicaandroid
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
@@ -23,6 +24,11 @@ class ListaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_lista)
+
+        findViewById<ImageView>(R.id.atras).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         fun dialogoNuevo() {
             val entrada = EditText(this)
@@ -46,7 +52,6 @@ class ListaActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.iconoMas).setOnClickListener {
             dialogoNuevo()
         }
-
 
         fun dialogoEditar() {
             val entrada = EditText(this)

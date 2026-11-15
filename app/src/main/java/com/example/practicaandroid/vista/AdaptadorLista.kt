@@ -37,8 +37,8 @@ class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorList
         val coche = lista.buscar(position)
         holder.itemView.findViewById<TextView>(R.id.tarjeta_marca).text = coche.marca
         holder.itemView.findViewById<TextView>(R.id.tarjeta_modelo).text = coche.modelo
-        holder.itemView.findViewById<TextView>(R.id.tarjeta_annio).text = coche.añoFabricacion
-        holder.itemView.findViewById<TextView>(R.id.tarjeta_numPuertas).text = coche.numPuertas
+        holder.itemView.findViewById<TextView>(R.id.tarjeta_annio).text = coche.añoFabricacion.toString()
+        holder.itemView.findViewById<TextView>(R.id.tarjeta_numPuertas).text = coche.numPuertas.toString()
         holder.itemView.findViewById<TextView>(R.id.tarjeta_velocidad).text = coche.velocidadMaxima
         holder.itemView.findViewById<RatingBar>(R.id.ratingBar2).rating = coche.opinion
         val draw = AppCompatResources.getDrawable(contexto, coche.imagenMarca.imagen)

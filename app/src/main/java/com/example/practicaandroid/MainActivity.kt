@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacionlista.datos.ListaMarcaCoche
+import com.example.practicaandroid.datosConversor.ConversorMoneda
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,13 +34,23 @@ class MainActivity : AppCompatActivity() {
             dialogoElegir()
         }
 
-        findViewById<Button>(R.id.bLista).setOnClickListener {
+        findViewById<ImageView>(R.id.irLista).setOnClickListener {
             val intent = Intent(this, ListaActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.irCalculadora).setOnClickListener {
+        findViewById<ImageView>(R.id.irCalculadora).setOnClickListener {
             val intent = Intent(this, MainActivityCalculadora::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.irConversor).setOnClickListener {
+            val intent = Intent(this, ConversorMoneda::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.irJuegoPPT).setOnClickListener {
+            val intent = Intent(this, PiedraPapelTijera::class.java)
             startActivity(intent)
         }
     }

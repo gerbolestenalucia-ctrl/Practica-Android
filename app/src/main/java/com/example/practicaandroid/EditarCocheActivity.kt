@@ -1,9 +1,11 @@
 package com.example.practicaandroid
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
@@ -16,10 +18,13 @@ import com.example.practicaandroid.datosCoche.RepositorioSingleton
 import com.example.practicaandroid.modeloCoche.Marca
 
 class EditarCocheActivity : AppCompatActivity() {
+
     val idCoche = intent.extras?.getInt(NUMERO_COCHES) ?: 0
     val opcion = intent.extras?.getString("opcion") ?: 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_editar_coche)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -27,6 +32,7 @@ class EditarCocheActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val txtMarca = findViewById<EditText>(R.id.editarMarca)
         val txtModelo = findViewById<EditText>(R.id.editarModelo)
         val txtAnnio = findViewById<EditText>(R.id.editarAnnio)
@@ -41,21 +47,21 @@ class EditarCocheActivity : AppCompatActivity() {
 
         spinner.adapter = adapter
 
-        if(opcion == "editar"){
+        if (opcion == "editar") {
             val coche = RepositorioSingleton.instance.listaCoches.buscar(idCoche)
 
             txtMarca.setText(coche.marca)
             txtModelo.setText(coche.modelo)
-            txtAnnio.setText(coche.añoFabricacion.toInt())
-            txtNumPuertas.setText(coche.numPuertas.toInt())
+            txtAnnio.setText(coche.añoFabricacion.toString().toInt())
+            txtNumPuertas.setText(coche.numPuertas.toString().toInt())
             txtVelocidad.setText(coche.velocidadMaxima)
             spinner.setSelection(coche.imagenMarca.ordinal)
-            ratingbar.setRating(coche.opinion.toFloat())
+            ratingbar.setRating(coche.opinion.toString().toFloat())
         }
         btnGuardar.setOnClickListener {
             val coche = MarcasCoche(
                 txtMarca.text.toString(),
-                txtMarca.text.toString(),
+                txtModelo.text.toString(),
                 txtAnnio.text.toString().toInt(),
                 txtNumPuertas.text.toString().toInt(),
                 txtVelocidad.text.toString(),
@@ -63,14 +69,12 @@ class EditarCocheActivity : AppCompatActivity() {
                 ratingbar.rating
             )
 
-        if(opcion == "nuevo") {
-            RepositorioSingleton.instance.listaCoches.nuevoCoche(coche)
-        } else {
-            RepositorioSingleton.instance.listaCoches.actualizar(idCoche,coche)
-        }
+            if (opcion == "nuevo") {
+                RepositorioSingleton.instance.listaCoches.nuevoCoche(coche)
+            } else {
+                RepositorioSingleton.instance.listaCoches.actualizar(idCoche, coche)
+            }
             finish()
         }
     }
 }
-
-

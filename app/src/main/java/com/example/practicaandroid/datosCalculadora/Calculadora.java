@@ -4,7 +4,6 @@ import android.util.Log;
 
 public class Calculadora {
     private String num1;
-
     private String num2;
 
     private char operacion;

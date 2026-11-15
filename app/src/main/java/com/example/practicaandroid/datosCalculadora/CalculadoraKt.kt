@@ -1,6 +1,6 @@
 package com.example.practicaandroid.datosCalculadora
 
-public class CalculadoraKt {
+class CalculadoraKt {
     var num1: String = ""
     var num2: String = ""
     var operacion: Char = 0.toChar()
