@@ -1,12 +1,10 @@
-package com.example.practicaandroid
+package com.example.practicaandroid.coches
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +13,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.aplicacionlista.modelo.MarcasCoche
-import com.example.practicaandroid.datosCoche.RepositorioSingleton
-import com.example.practicaandroid.vista.AdaptadorLista
+import com.example.practicaandroid.MainActivity
+import com.example.practicaandroid.R
+import com.example.practicaandroid.coches.datos.RepositorioSingleton
+import com.example.practicaandroid.coches.vista.AdaptadorLista
 
 class ListaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

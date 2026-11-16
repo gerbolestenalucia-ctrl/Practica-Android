@@ -1,6 +1,4 @@
-package com.example.aplicacionlista.modelo
-
-import com.example.practicaandroid.modeloCoche.Marca
+package com.example.practicaandroid.coches.modelo
 
 data class MarcasCoche (
     val marca: String,

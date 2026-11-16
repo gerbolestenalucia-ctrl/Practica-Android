@@ -1,7 +1,7 @@
 package com.example.aplicacionlista.datos
 
-import com.example.aplicacionlista.modelo.MarcasCoche
-import com.example.practicaandroid.modeloCoche.Marca
+import com.example.practicaandroid.coches.modelo.MarcasCoche
+import com.example.practicaandroid.coches.modelo.Marca
 
 interface RepositorioMarcaCoche {
 

@@ -3,7 +3,6 @@ package com.example.practicaandroid
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -12,12 +11,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacionlista.datos.ListaMarcaCoche
-import com.example.practicaandroid.datosConversor.ConversorMoneda
+import com.example.practicaandroid.coches.CocheActivity
+import com.example.practicaandroid.coches.ListaActivity
+import com.example.practicaandroid.datosCalculadora.MainActivityCalculadora
+import com.example.practicaandroid.datosConversor.ConversorMonedaActivity
+import com.example.practicaandroid.datosJuegos.JuegosActivity
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        val listaCoches = ListaMarcaCoche();
+        val listaCoches = ListaMarcaCoche()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<Button>(R.id.irCoche).setOnClickListener {
+        findViewById<ImageView>(R.id.irCoche).setOnClickListener {
             dialogoElegir()
         }
 
@@ -45,12 +48,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<ImageView>(R.id.irConversor).setOnClickListener {
-            val intent = Intent(this, ConversorMoneda::class.java)
+            val intent = Intent(this, ConversorMonedaActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<ImageView>(R.id.irJuegoPPT).setOnClickListener {
-            val intent = Intent(this, PiedraPapelTijera::class.java)
+        findViewById<ImageView>(R.id.irJuegos).setOnClickListener {
+            val intent = Intent(this, JuegosActivity::class.java)
             startActivity(intent)
         }
     }
@@ -64,8 +67,6 @@ class MainActivity : AppCompatActivity() {
             .setView(entrada)
             .setPositiveButton("Buscar") { dialog, whichButton ->
                 val num = entrada.text.toString().toInt()
-                //val cocheSeleccionado = listaCoches.buscar(num)
-                //Log.d("COCHE LOG", cocheSeleccionado.marca)
                 val intent = Intent(this, CocheActivity::class.java)
                 intent.putExtra("numero coche", num)
                 startActivity(intent)

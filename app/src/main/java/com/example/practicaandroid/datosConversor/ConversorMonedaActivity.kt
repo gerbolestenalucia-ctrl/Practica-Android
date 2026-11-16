@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.practicaandroid.MainActivity
 import com.example.practicaandroid.R
 
-class ConversorMoneda : AppCompatActivity() {
+class ConversorMonedaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,21 +39,13 @@ class ConversorMoneda : AppCompatActivity() {
             "Libras"
         )
 
-        val adapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_spinner_item,
-            monedas
-        )
-
-        adapter.setDropDownViewResource(
-            android.R.layout.simple_dropdown_item_1line
-        )
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item,
+            monedas)
 
         spinnerOrigen.adapter = adapter
         spinnerDestino.adapter = adapter
 
         boton.setOnClickListener {
-
             val cantidad = editText.text.toString().toDouble()
 
             val origen = spinnerOrigen.selectedItem.toString()
@@ -83,6 +75,27 @@ class ConversorMoneda : AppCompatActivity() {
             }
             else if (origen == "Libras" && destino == "Euros") {
                 conversion = cantidad * 1.20
+            }
+
+            else if(origen == "Pesos" && destino == "Dolares") {
+                conversion = cantidad * 0.054
+            }
+            else if(origen == "Dolares" && destino == "Pesos") {
+                conversion = cantidad * 18.57
+            }
+
+            else if(origen == "Pesos" && destino == "Libras") {
+                conversion = cantidad * 0.041
+            }
+            else if(origen == "Libras" && destino == "Pesos") {
+                conversion = cantidad * 24.48
+            }
+
+            else if(origen == "Dolares" && destino == "Libras") {
+                conversion = cantidad * 0.76
+            }
+            else if(origen == "Libras" && destino == "Dolares") {
+                conversion = cantidad * 1.32
             }
 
             resultado.text = "Resultado: " + conversion.toFloat()

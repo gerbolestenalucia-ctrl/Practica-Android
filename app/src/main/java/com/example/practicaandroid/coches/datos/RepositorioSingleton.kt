@@ -1,4 +1,4 @@
-package com.example.practicaandroid.datosCoche
+package com.example.practicaandroid.coches.datos
 
 import com.example.aplicacionlista.datos.ListaMarcaCoche
 import com.example.aplicacionlista.datos.RepositorioMarcaCoche

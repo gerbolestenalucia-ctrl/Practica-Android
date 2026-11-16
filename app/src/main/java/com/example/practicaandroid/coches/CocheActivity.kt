@@ -1,4 +1,4 @@
-package com.example.practicaandroid
+package com.example.practicaandroid.coches
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.practicaandroid.datosCoche.RepositorioSingleton
+import com.example.practicaandroid.R
+import com.example.practicaandroid.coches.datos.RepositorioSingleton
 
 class CocheActivity : AppCompatActivity() {
 
@@ -38,6 +39,6 @@ class CocheActivity : AppCompatActivity() {
         textoModelo.text = coche.modelo
         textoAnio.text = coche.añoFabricacion.toString()
         val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
-        ratingBar.rating = coche.opinion.toFloat()
+        ratingBar.rating = coche.opinion.toString().toFloat()
     }
 }

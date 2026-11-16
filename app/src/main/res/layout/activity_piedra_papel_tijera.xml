@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF7F2"
-    tools:context=".PiedraPapelTijera">
+    tools:context=".datosJuegos.PiedraPapelTijera">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarConversor"
@@ -151,16 +151,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutJuego"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="230dp"
         android:background="#FAF7F2"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imgJugador"

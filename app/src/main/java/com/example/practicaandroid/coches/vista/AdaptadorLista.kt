@@ -1,4 +1,4 @@
-package com.example.practicaandroid.vista
+package com.example.practicaandroid.coches.vista
 
 import android.content.Context
 import android.content.Intent
@@ -11,10 +11,9 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
-import com.example.practicaandroid.CocheActivity
-import com.example.practicaandroid.MainActivity
+import com.example.practicaandroid.coches.CocheActivity
 import com.example.practicaandroid.R
-import com.example.practicaandroid.datosCoche.RepositorioSingleton
+import com.example.practicaandroid.coches.datos.RepositorioSingleton
 
 class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorLista.CreadorItems>(){
 

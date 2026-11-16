@@ -1,4 +1,4 @@
-package com.example.practicaandroid
+package com.example.practicaandroid.datosCalculadora
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.practicaandroid.datosCalculadora.CalculadoraKt
+import com.example.practicaandroid.MainActivity
+import com.example.practicaandroid.R
 
 class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
 

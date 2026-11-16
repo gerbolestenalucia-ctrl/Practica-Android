@@ -1,4 +1,4 @@
-package com.example.practicaandroid.modeloCoche
+package com.example.practicaandroid.coches.modelo
 
 import com.example.practicaandroid.R
 

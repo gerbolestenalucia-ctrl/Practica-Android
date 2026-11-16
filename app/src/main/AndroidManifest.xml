@@ -22,31 +22,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CocheActivity"
+            android:name=".coches.CocheActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".MainActivityCalculadora"
+            android:name=".datosCalculadora.MainActivityCalculadora"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ListaActivity"
+            android:name=".coches.ListaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".datosConversor.ConversorMoneda"
+            android:name=".datosConversor.ConversorMonedaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Juego"
+            android:name=".coches.EditarCocheActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".EditarCocheActivity"
+            android:name=".datosJuegos.PiedraPapelTijera"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".PiedraPapelTijera"
+            android:name=".datosJuegos.JuegosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".datosJuegos.Dados"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

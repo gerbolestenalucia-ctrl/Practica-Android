@@ -1,4 +1,4 @@
-package com.example.practicaandroid
+package com.example.practicaandroid.datosJuegos
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.practicaandroid.MainActivity
+import com.example.practicaandroid.R
 
 class PiedraPapelTijera : AppCompatActivity() {
     //array que recorre todas las imagenes
@@ -34,7 +36,7 @@ class PiedraPapelTijera : AppCompatActivity() {
         }
 
         findViewById<ImageView>(R.id.atras).setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, JuegosActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,9 +44,15 @@ class PiedraPapelTijera : AppCompatActivity() {
         imgUsuario = findViewById(R.id.imgJugador)
         imgBot = findViewById(R.id.imgBot)
 
-        findViewById<ImageView>(R.id.imgPiedra).setOnClickListener { jugar(R.drawable.piedra) }
-        findViewById<ImageView>(R.id.imgPapel).setOnClickListener { jugar(R.drawable.papel) }
-        findViewById<ImageView>(R.id.imgTijera).setOnClickListener { jugar(R.drawable.tijera) }
+        findViewById<ImageView>(R.id.imgPiedra).setOnClickListener {
+            jugar(R.drawable.piedra)
+        }
+        findViewById<ImageView>(R.id.imgPapel).setOnClickListener {
+            jugar(R.drawable.papel)
+        }
+        findViewById<ImageView>(R.id.imgTijera).setOnClickListener {
+            jugar(R.drawable.tijera)
+        }
 
     }
     private fun jugar(eleccionUsuario: Int) {
@@ -52,9 +60,15 @@ class PiedraPapelTijera : AppCompatActivity() {
         txtMensaje.text = ""
 
         //animación rápida
-        imgBot.postDelayed({ imgBot.setImageResource(R.drawable.piedra) }, 100)
-        imgBot.postDelayed({ imgBot.setImageResource(R.drawable.papel) }, 200)
-        imgBot.postDelayed({ imgBot.setImageResource(R.drawable.tijera) }, 300)
+        imgBot.postDelayed({
+            imgBot.setImageResource(R.drawable.piedra)
+                           }, 100)
+        imgBot.postDelayed({
+            imgBot.setImageResource(R.drawable.papel)
+                           }, 200)
+        imgBot.postDelayed({
+            imgBot.setImageResource(R.drawable.tijera)
+                           }, 300)
 
         //elección final y muestra el ganador en ese mismo TextView
         imgBot.postDelayed({
