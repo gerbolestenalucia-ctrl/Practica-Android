@@ -18,6 +18,7 @@ import com.example.practicaandroid.datosCoche.RepositorioSingleton
 
 class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorLista.CreadorItems>(){
 
+<<<<<<< HEAD
     companion object {
         private var instance: AdaptadorLista? = null
 
@@ -30,6 +31,8 @@ class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorList
             }
         }*/
     }
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     val lista = RepositorioSingleton.instance.listaCoches
     val inflador = contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -38,7 +41,11 @@ class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorList
         parent: ViewGroup,
         viewType: Int
     ): CreadorItems {
+<<<<<<< HEAD
         val vista = inflador.inflate(R.layout.activity_tarjeta_coche, parent, false)
+=======
+        val vista = inflador.inflate(R.layout.tarjeta_coche, parent, false)
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
         return CreadorItems(vista, contexto)
     }
 
@@ -49,8 +56,13 @@ class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorList
         val coche = lista.buscar(position)
         holder.itemView.findViewById<TextView>(R.id.tarjeta_marca).text = coche.marca
         holder.itemView.findViewById<TextView>(R.id.tarjeta_modelo).text = coche.modelo
+<<<<<<< HEAD
         holder.itemView.findViewById<TextView>(R.id.tarjeta_annio).text = coche.añoFabricacion.toString()
         holder.itemView.findViewById<TextView>(R.id.tarjeta_numPuertas).text = coche.numPuertas.toString()
+=======
+        holder.itemView.findViewById<TextView>(R.id.tarjeta_annio).text = coche.añoFabricacion
+        holder.itemView.findViewById<TextView>(R.id.tarjeta_numPuertas).text = coche.numPuertas
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
         holder.itemView.findViewById<TextView>(R.id.tarjeta_velocidad).text = coche.velocidadMaxima
         holder.itemView.findViewById<RatingBar>(R.id.ratingBar2).rating = coche.opinion
         val draw = AppCompatResources.getDrawable(contexto, coche.imagenMarca.imagen)

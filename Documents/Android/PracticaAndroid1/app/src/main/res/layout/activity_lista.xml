@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lista de Coches"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+<<<<<<< HEAD
+                android:id="@+id/nuevo"
+=======
+                android:id="@+id/iconoMas"
+>>>>>>> 20a85884e1ce7cddedf7a72b68028f7482935d4c
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                app:srcCompat="@drawable/mas" />
+
+            <ImageView
+<<<<<<< HEAD
+                android:id="@+id/editar"
+=======
+                android:id="@+id/iconoEditar"
+>>>>>>> 20a85884e1ce7cddedf7a72b68028f7482935d4c
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                app:srcCompat="@drawable/editar" />
+
+            <ImageView
+<<<<<<< HEAD
+                android:id="@+id/eliminar"
+=======
+                android:id="@+id/iconoEliminar"
+>>>>>>> 20a85884e1ce7cddedf7a72b68028f7482935d4c
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                app:srcCompat="@drawable/eliminar" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

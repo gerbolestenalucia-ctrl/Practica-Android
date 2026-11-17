@@ -1,6 +1,10 @@
 package com.example.practicaandroid.datosCalculadora
 
+<<<<<<< HEAD
 class CalculadoraKt {
+=======
+public class CalculadoraKt {
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     var num1: String = ""
     var num2: String = ""
     var operacion: Char = 0.toChar()

@@ -2,7 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/irCoche"
+=======
+    android:id="@+id/main"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditarCocheActivity">
@@ -11,8 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+<<<<<<< HEAD
         tools:layout_editor_absoluteX="38dp"
         tools:layout_editor_absoluteY="-203dp">
+=======
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="16dp">
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 
         <EditText
             android:id="@+id/editarMarca"
@@ -94,7 +103,11 @@
             android:textSize="16dp" />
 
         <RatingBar
+<<<<<<< HEAD
             android:id="@+id/editarRating"
+=======
+            android:id="@+id/ratingBar3"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

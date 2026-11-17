@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 package com.example.practicaandroid.datosCoche
 
 import com.example.aplicacionlista.datos.RepositorioMarcaCoche
+=======
+package com.example.aplicacionlista.datos
+
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import com.example.aplicacionlista.modelo.MarcasCoche
 
 class ListaMarcaCoche : RepositorioMarcaCoche {

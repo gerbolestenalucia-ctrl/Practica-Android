@@ -22,6 +22,10 @@ dependencyResolutionManagement {
     }
 }
 
+<<<<<<< HEAD
 rootProject.name = "PracticaAndroid"
+=======
+rootProject.name = "Practica Android"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 include(":app")
  

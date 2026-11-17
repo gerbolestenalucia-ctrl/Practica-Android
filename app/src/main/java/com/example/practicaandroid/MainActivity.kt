@@ -5,15 +5,22 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+<<<<<<< HEAD
 import android.widget.ImageView
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+<<<<<<< HEAD
 import com.example.practicaandroid.datosCoche.ListaMarcaCoche
 import com.example.practicaandroid.datosConversor.ConversorMoneda
 import com.example.practicaandroid.datosDado.JuegoDado
+=======
+import com.example.aplicacionlista.datos.ListaMarcaCoche
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,21 +32,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+<<<<<<< HEAD
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.irCoche)) { v, insets ->
+=======
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+<<<<<<< HEAD
         findViewById<ImageView>(R.id.irCoche).setOnClickListener {
             dialogoElegir()
         }
 
         findViewById<ImageView>(R.id.irLista).setOnClickListener {
+=======
+        findViewById<Button>(R.id.irCoche).setOnClickListener {
+            dialogoElegir()
+        }
+
+        findViewById<Button>(R.id.bLista).setOnClickListener {
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             val intent = Intent(this, ListaActivity::class.java)
             startActivity(intent)
         }
 
+<<<<<<< HEAD
         findViewById<ImageView>(R.id.irCalculadora).setOnClickListener {
             val intent = Intent(this, MainActivityCalculadora::class.java)
             startActivity(intent)
@@ -61,6 +81,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+=======
+        findViewById<Button>(R.id.irCalculadora).setOnClickListener {
+            val intent = Intent(this, MainActivityCalculadora::class.java)
+            startActivity(intent)
+        }
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     }
     fun dialogoElegir(){
         val entrada = EditText(this)

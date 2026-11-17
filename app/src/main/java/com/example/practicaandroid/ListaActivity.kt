@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
 import android.widget.ImageView
+<<<<<<< HEAD
+=======
+import android.widget.Toast
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +17,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
+=======
+import com.example.aplicacionlista.modelo.MarcasCoche
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import com.example.practicaandroid.datosCoche.RepositorioSingleton
 import com.example.practicaandroid.vista.AdaptadorLista
 
@@ -22,11 +30,14 @@ class ListaActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_lista)
 
+<<<<<<< HEAD
         findViewById<ImageView>(R.id.atras).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
         fun dialogoNuevo() {
             val entrada = EditText(this)
             entrada.inputType = InputType.TYPE_CLASS_NUMBER
@@ -50,6 +61,10 @@ class ListaActivity : AppCompatActivity() {
             dialogoNuevo()
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
         fun dialogoEditar() {
             val entrada = EditText(this)
             entrada.inputType = InputType.TYPE_CLASS_NUMBER
@@ -97,7 +112,11 @@ class ListaActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+<<<<<<< HEAD
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.irCoche)) { v, insets ->
+=======
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

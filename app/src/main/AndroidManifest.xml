@@ -38,6 +38,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+<<<<<<< HEAD
             android:name=".EditarCocheActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
@@ -47,6 +48,13 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".datosDado.JuegoDado"
+=======
+            android:name=".Juego"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EditarCocheActivity"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

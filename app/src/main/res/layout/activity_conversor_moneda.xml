@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/irCoche"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".datosConversor.ConversorMoneda">
 
+<<<<<<< HEAD
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarConversor"
         android:layout_width="match_parent"
@@ -96,4 +104,6 @@
         app:layout_constraintStart_toStartOf="@id/buttonConvertir"
         android:layout_marginTop="20dp"/>
 
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 </androidx.constraintlayout.widget.ConstraintLayout>

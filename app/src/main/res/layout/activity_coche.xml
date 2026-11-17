@@ -2,12 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/irCoche"
+=======
+    android:id="@+id/main"
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CocheActivity">
 
+<<<<<<< HEAD
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_coche"
         android:layout_width="match_parent"
@@ -16,6 +21,8 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     <TextView
         android:id="@+id/textMarca"
         android:layout_width="match_parent"

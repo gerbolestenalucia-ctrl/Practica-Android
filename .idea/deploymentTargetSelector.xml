@@ -6,6 +6,7 @@
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
+<<<<<<< HEAD
       <SelectionState runConfigName="PiedraPapelTijera">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
@@ -22,6 +23,8 @@
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     </selectionStates>
   </component>
 </project>

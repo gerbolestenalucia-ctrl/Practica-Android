@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_tarjeta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/icono_pequenno"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_margin="6dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/bmw" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tarjeta_marca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Marca: "
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tarjeta_modelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Modelo:" />
+
+            <TextView
+                android:id="@+id/tarjeta_annio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Año Fabricación:" />
+
+            <TextView
+                android:id="@+id/tarjeta_numPuertas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Número Puertas: " />
+
+            <TextView
+                android:id="@+id/tarjeta_velocidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+<<<<<<< HEAD
+                android:text="Velocidad Máxima:" />
+=======
+                android:text="Velocidad máxima:" />
+>>>>>>> 20a85884e1ce7cddedf7a72b68028f7482935d4c
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numStars="5" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

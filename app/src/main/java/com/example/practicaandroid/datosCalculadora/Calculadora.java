@@ -4,6 +4,10 @@ import android.util.Log;
 
 public class Calculadora {
     private String num1;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     private String num2;
 
     private char operacion;
@@ -66,4 +70,8 @@ public class Calculadora {
             this.num2 += ",";
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac

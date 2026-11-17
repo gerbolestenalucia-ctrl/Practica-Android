@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">PracticaAndroid</string>
     
     <string-array name="numero_dados">
@@ -22,4 +23,7 @@
         <item>D12</item>
         <item>D20</item>
     </string-array>
+=======
+    <string name="app_name">Practica Android</string>
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 </resources>

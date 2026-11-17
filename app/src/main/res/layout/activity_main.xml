@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9ecbcf"
@@ -77,5 +78,61 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.536"
         app:srcCompat="@drawable/coches" />
+=======
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/irCoche"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="ir a Coche"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bLista" />
+
+    <Button
+        android:id="@+id/irCalculadora"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Ir a Calculadora"
+        app:layout_constraintBottom_toTopOf="@+id/irConversor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/irJuego"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Ir a Juego"
+        app:layout_constraintBottom_toTopOf="@+id/bLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irConversor" />
+
+    <Button
+        android:id="@+id/bLista"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Ver Lista"
+        app:layout_constraintBottom_toTopOf="@+id/irCoche"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irJuego" />
+
+    <Button
+        android:id="@+id/irConversor"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Ir a Conversor Moneda"
+        app:layout_constraintBottom_toTopOf="@+id/irJuego"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irCalculadora" />
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 
 </androidx.constraintlayout.widget.ConstraintLayout>

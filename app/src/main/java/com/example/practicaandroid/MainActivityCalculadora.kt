@@ -1,10 +1,16 @@
 package com.example.practicaandroid
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+=======
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,18 +28,25 @@ class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_calculadora)
+<<<<<<< HEAD
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.irCoche)) { v, insets ->
+=======
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         resultado = findViewById(R.id.textView)
 
+<<<<<<< HEAD
         findViewById<ImageView>(R.id.atras).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
         val listaBotones = listOf<Button>(
             findViewById(R.id.bClear),
             findViewById(R.id.bResta),

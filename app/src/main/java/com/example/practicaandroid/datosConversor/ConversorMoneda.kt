@@ -1,5 +1,6 @@
 package com.example.practicaandroid.datosConversor
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -8,11 +9,17 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
+=======
+import android.os.Bundle
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+<<<<<<< HEAD
 import com.example.practicaandroid.MainActivity
+=======
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
 import com.example.practicaandroid.R
 
 class ConversorMoneda : AppCompatActivity() {
@@ -20,6 +27,7 @@ class ConversorMoneda : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_conversor_moneda)
+<<<<<<< HEAD
 
         findViewById<ImageView>(R.id.atras).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -89,6 +97,9 @@ class ConversorMoneda : AppCompatActivity() {
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.irCoche)) { v, insets ->
+=======
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

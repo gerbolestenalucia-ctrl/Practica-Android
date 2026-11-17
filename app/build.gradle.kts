@@ -35,7 +35,13 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
+<<<<<<< HEAD
     implementation(libs.androidx.core.ktx)
+=======
+    implementation(libs.androidx.coordinatorlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.recyclerview)
+>>>>>>> 702674c4824ea2a07c2d91a2fb7b4910f7e01bac
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
