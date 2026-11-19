@@ -1,12 +1,12 @@
 package com.example.practicaandroid.coches.modelo
 
 data class MarcasCoche (
-    val marca: String,
-    val modelo: String,
-    val añoFabricacion: Int,
-    val numPuertas: Int,
-    val velocidadMaxima: String,
-    val imagenMarca : Marca,
+    var marca: String,
+    var modelo: String,
+    var añoFabricacion: Int,
+    var numPuertas: Int,
+    var velocidadMaxima: String,
+    var imagenMarca : Marca,
     var opinion: Float = 0f
 )
 {

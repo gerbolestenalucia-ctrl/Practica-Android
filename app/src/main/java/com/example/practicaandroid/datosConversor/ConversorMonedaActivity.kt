@@ -2,6 +2,8 @@ package com.example.practicaandroid.datosConversor
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +12,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.practicaandroid.MainActivity
@@ -20,11 +23,6 @@ class ConversorMonedaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_conversor_moneda)
-
-        findViewById<ImageView>(R.id.atras).setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
 
         val editText = findViewById<EditText>(R.id.editTextNumber)
         val spinnerOrigen = findViewById<Spinner>(R.id.spinner3)
@@ -105,6 +103,27 @@ class ConversorMonedaActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val barra = findViewById<Toolbar>(R.id.toolbarConversor)
+        setSupportActionBar(barra)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_atras, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val idBoton = item.itemId
+        return when (idBoton) {
+            R.id.btnAtras -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

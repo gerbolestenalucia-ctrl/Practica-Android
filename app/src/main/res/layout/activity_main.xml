@@ -74,22 +74,6 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/irCoche"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/coches" />
-
-        <TextView
-            android:id="@+id/txtCoche"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Coche"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,28 +1,37 @@
 package com.example.practicaandroid.coches
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.Spinner
+
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.practicaandroid.MainActivity
+
 import com.example.practicaandroid.R
-import com.example.practicaandroid.coches.modelo.MarcasCoche
 import com.example.practicaandroid.coches.CocheActivity.Companion.NUMERO_COCHES
 import com.example.practicaandroid.coches.datos.RepositorioSingleton
 import com.example.practicaandroid.coches.modelo.Marca
+import com.example.practicaandroid.coches.modelo.MarcasCoche
 
 class EditarCocheActivity : AppCompatActivity() {
 
-    val idCoche = intent.extras?.getInt(NUMERO_COCHES) ?: 0
-    val opcion = intent.extras?.getString("opcion") ?: 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val idCoche = intent.getIntExtra(CocheActivity.NUMERO_COCHES, -1)
 
         enableEdgeToEdge()
         setContentView(R.layout.activity_editar_coche)
@@ -32,49 +41,83 @@ class EditarCocheActivity : AppCompatActivity() {
             insets
         }
 
-        val txtMarca = findViewById<EditText>(R.id.editarMarca)
-        val txtModelo = findViewById<EditText>(R.id.editarModelo)
-        val txtAnnio = findViewById<EditText>(R.id.editarAnnio)
-        val txtNumPuertas = findViewById<EditText>(R.id.editarNumPuertas)
-        val txtVelocidad = findViewById<EditText>(R.id.editarVelocidad)
-        val spinner = findViewById<Spinner>(R.id.spinner)
-        val ratingbar = findViewById<RatingBar>(R.id.ratingBar3)
-        val btnGuardar = findViewById<Button>(R.id.buttonGuardar)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item,
-            Marca.values())
+        val barra = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(barra)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val marcas = Marca.values()
 
-        spinner.adapter = adapter
+        val repo= RepositorioSingleton.instance.listaCoches
+        val esEdicion=idCoche >= 0 && idCoche < repo.longitud()
 
-        if (opcion == "editar") {
+        val marca = findViewById<EditText>(R.id.editarMarca)
+        val modelo = findViewById<EditText>(R.id.editarModelo)
+        val anio = findViewById<EditText>(R.id.editarAnnio)
+        val puertas = findViewById<EditText>(R.id.editarNumPuertas)
+        val velocidad = findViewById<EditText>(R.id.editarVelocidad)
+        val imagen = findViewById<Spinner>(R.id.spinner)
+        val rating = findViewById<RatingBar>(R.id.ratingBar3)
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, marcas)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        imagen.adapter = adapter
+
+
+        if (esEdicion) {
             val coche = RepositorioSingleton.instance.listaCoches.buscar(idCoche)
-
-            txtMarca.setText(coche.marca)
-            txtModelo.setText(coche.modelo)
-            txtAnnio.setText(coche.añoFabricacion.toString().toInt())
-            txtNumPuertas.setText(coche.numPuertas.toString().toInt())
-            txtVelocidad.setText(coche.velocidadMaxima)
-            spinner.setSelection(coche.imagenMarca.ordinal)
-            ratingbar.setRating(coche.opinion.toString().toFloat())
+            marca.setText(coche.marca)
+            modelo.setText(coche.modelo)
+            anio.setText(coche.añoFabricacion.toString())
+            puertas.setText(coche.numPuertas.toString())
+            velocidad.setText(coche.velocidadMaxima)
+            imagen.setSelection(coche.imagenMarca.ordinal)
+            rating.rating = coche.opinion.toString().toFloat()
         }
-        btnGuardar.setOnClickListener {
-            val coche = MarcasCoche(
-                txtMarca.text.toString(),
-                txtModelo.text.toString(),
-                txtAnnio.text.toString().toInt(),
-                txtNumPuertas.text.toString().toInt(),
-                txtVelocidad.text.toString(),
-                spinner.selectedItem as Marca,
-                ratingbar.rating
-            )
+        findViewById<Button>(R.id.buttonGuardar).setOnClickListener {
+            if (esEdicion) {
+                val coche = repo.buscar(idCoche)
+                coche.marca = marca.text.toString()
+                coche.modelo = modelo.text.toString()
+                coche.añoFabricacion = anio.text.toString().toInt()
+                coche.numPuertas = puertas.text.toString().toInt()
+                coche.velocidadMaxima = velocidad.text.toString()
+                coche.imagenMarca = imagen.selectedItem as Marca
+                coche.opinion = rating.rating
 
-            if (opcion == "nuevo") {
-                RepositorioSingleton.instance.listaCoches.nuevoCoche(coche)
+                finish()
             } else {
-                RepositorioSingleton.instance.listaCoches.actualizar(idCoche, coche)
+               repo.nuevoCoche(
+                    MarcasCoche(
+                        marca = marca.text.toString(),
+                        modelo = modelo.text.toString(),
+                        añoFabricacion = anio.text.toString().toInt(),
+                        numPuertas = puertas.text.toString().toInt(),
+                        velocidadMaxima = velocidad.text.toString(),
+                        imagenMarca = imagen.selectedItem as Marca,
+                        opinion = rating.rating
+                    )
+                )
+                val intent = Intent(this, ListaActivity::class.java)
+                startActivity(intent)
+                finish()
             }
-            finish()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_atras, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val idBoton = item.itemId
+        return when (idBoton) {
+            R.id.btnAtras -> {
+                finish()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

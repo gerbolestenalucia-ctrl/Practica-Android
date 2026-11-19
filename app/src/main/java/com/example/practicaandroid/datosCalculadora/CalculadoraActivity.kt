@@ -2,18 +2,22 @@ package com.example.practicaandroid.datosCalculadora
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.practicaandroid.MainActivity
 import com.example.practicaandroid.R
+import com.example.practicaandroid.coches.CocheActivity.Companion.NUMERO_COCHES
+import com.example.practicaandroid.coches.EditarCocheActivity
 
-class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
+class CalculadoraActivity : AppCompatActivity(), View.OnClickListener {
 
     val calc = CalculadoraKt();
 
@@ -28,12 +32,12 @@ class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        resultado = findViewById(R.id.textView)
 
-        findViewById<ImageView>(R.id.atras).setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        val barra = findViewById<Toolbar>(R.id.toolbarCalculadora)
+        setSupportActionBar(barra)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        resultado = findViewById(R.id.textView)
 
         val listaBotones = listOf<Button>(
             findViewById(R.id.bClear),
@@ -129,6 +133,23 @@ class MainActivityCalculadora : AppCompatActivity(), View.OnClickListener {
             }
         }
         resultado.text = calc.num2
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_atras, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val idBoton = item.itemId
+        return when (idBoton) {
+            R.id.btnAtras -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

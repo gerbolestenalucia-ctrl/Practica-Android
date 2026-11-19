@@ -3,8 +3,9 @@ package com.example.practicaandroid.coches
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.EditText
-import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,99 +16,59 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practicaandroid.MainActivity
 import com.example.practicaandroid.R
+import com.example.practicaandroid.coches.CocheActivity.Companion.NUMERO_COCHES
 import com.example.practicaandroid.coches.datos.RepositorioSingleton
-import com.example.practicaandroid.coches.vista.AdaptadorLista
+import com.example.practicaandroid.vista.AdaptadorLista
 
 class ListaActivity : AppCompatActivity() {
+
+    var idCoche: Int = -1
+    private val adaptador = AdaptadorLista.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        idCoche = intent.extras?.getInt(NUMERO_COCHES) ?: 0
         enableEdgeToEdge()
         setContentView(R.layout.activity_lista)
-
-        findViewById<ImageView>(R.id.atras).setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
-        fun dialogoNuevo() {
-            val entrada = EditText(this)
-            entrada.inputType = InputType.TYPE_CLASS_NUMBER
-            entrada.hint = "Numero de coches"
-            AlertDialog.Builder(this)
-                .setTitle("Introduce un nuevo coche")
-                .setTitle("Introduce un numero para añadir coches")
-                .setView(entrada)
-                .setPositiveButton("Nuevo") { dialog, whichButton ->
-                    val num = entrada.text.toString().toInt()
-                    val intent = Intent(this, EditarCocheActivity::class.java)
-                    intent.putExtra("numero coche", num)
-                    intent.putExtra("opcion", "nuevo")
-                    startActivity(intent)
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
-        }
-
-        findViewById<ImageView>(R.id.iconoMas).setOnClickListener {
-            dialogoNuevo()
-        }
-
-        fun dialogoEditar() {
-            val entrada = EditText(this)
-            entrada.inputType = InputType.TYPE_CLASS_NUMBER
-            entrada.hint = "Numero de coches"
-            AlertDialog.Builder(this)
-                .setTitle("Editar un coche")
-                .setTitle("Introduce un numero para editar el coche")
-                .setView(entrada)
-                .setPositiveButton("Editar") { dialog, whichButton ->
-                    val num = entrada.text.toString().toInt()
-                    val intent = Intent(this, EditarCocheActivity::class.java)
-                    intent.putExtra("numero coche", num)
-                    intent.putExtra("opcion", "editar")
-                    startActivity(intent)
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
-        }
-
-        findViewById<ImageView>(R.id.iconoEditar).setOnClickListener {
-            dialogoEditar()
-        }
-
-        fun dialogoEliminar() {
-            val entrada = EditText(this)
-            entrada.inputType = InputType.TYPE_CLASS_NUMBER
-            entrada.hint = "Numero de coches"
-            AlertDialog.Builder(this)
-                .setTitle("Eliminar un coche")
-                .setTitle("Introduce un numero para eliminar el coche")
-                .setView(entrada)
-                .setPositiveButton("Eliminar") { dialog, whichButton ->
-                    val num = entrada.text.toString().toInt()
-                    RepositorioSingleton.instance.listaCoches.borrar(num)
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
-        }
-
-        findViewById<ImageView>(R.id.iconoEliminar).setOnClickListener {
-            dialogoEliminar();
-        }
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val barra = findViewById<Toolbar>(R.id.toolbarLista)
+        setSupportActionBar(barra)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
         val recycler = findViewById<RecyclerView>(R.id.lista)
-        val adaptador = AdaptadorLista(this)
         recycler.adapter = adaptador
         val layout = LinearLayoutManager(this)
         recycler.layoutManager = layout
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_crear_salir, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val idBoton = item.itemId
+        return when (idBoton) {
+            R.id.añadirNuevo -> {
+                val intent = Intent(this, EditarCocheActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.añadirSalir -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onResume() {
+        findViewById<RecyclerView>(R.id.lista).adapter?.notifyDataSetChanged()
+        super.onResume()
     }
 }

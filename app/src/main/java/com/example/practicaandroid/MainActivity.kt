@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacionlista.datos.ListaMarcaCoche
 import com.example.practicaandroid.coches.CocheActivity
 import com.example.practicaandroid.coches.ListaActivity
-import com.example.practicaandroid.datosCalculadora.MainActivityCalculadora
+import com.example.practicaandroid.datosCalculadora.CalculadoraActivity
 import com.example.practicaandroid.datosConversor.ConversorMonedaActivity
 import com.example.practicaandroid.datosJuegos.JuegosActivity
 
@@ -33,17 +33,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<ImageView>(R.id.irCoche).setOnClickListener {
-            dialogoElegir()
-        }
-
         findViewById<ImageView>(R.id.irLista).setOnClickListener {
             val intent = Intent(this, ListaActivity::class.java)
             startActivity(intent)
         }
 
         findViewById<ImageView>(R.id.irCalculadora).setOnClickListener {
-            val intent = Intent(this, MainActivityCalculadora::class.java)
+            val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)
         }
 
