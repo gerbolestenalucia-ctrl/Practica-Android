@@ -53,21 +53,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    fun dialogoElegir(){
-        val entrada = EditText(this)
-        entrada.inputType = InputType.TYPE_CLASS_NUMBER
-        entrada.hint = "Numero de coches"
-        AlertDialog.Builder(this)
-            .setTitle("Elige un coche")
-            .setTitle("Introduce un numero para elegir el coche")
-            .setView(entrada)
-            .setPositiveButton("Buscar") { dialog, whichButton ->
-                val num = entrada.text.toString().toInt()
-                val intent = Intent(this, CocheActivity::class.java)
-                intent.putExtra("numero coche", num)
-                startActivity(intent)
-            }
-            .setNegativeButton("Cancelar", null)
-            .show()
-    }
 }

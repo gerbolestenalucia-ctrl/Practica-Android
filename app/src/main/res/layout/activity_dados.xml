@@ -5,18 +5,19 @@
     android:id="@+id/irDado"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightblue"
     tools:context=".datosJuegos.Dados">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarJuegoDado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spnNumDado"
@@ -69,6 +70,7 @@
         android:id="@+id/btnLanzar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
         android:text="Lanzar Dados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

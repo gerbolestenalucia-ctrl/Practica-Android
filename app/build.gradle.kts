@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.coordinatorlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.gridlayout)
     implementation(libs.androidx.recyclerview)
     implementation(libs.material)
     testImplementation(libs.junit)

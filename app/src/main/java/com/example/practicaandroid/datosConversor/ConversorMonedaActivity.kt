@@ -118,8 +118,7 @@ class ConversorMonedaActivity : AppCompatActivity() {
         val idBoton = item.itemId
         return when (idBoton) {
             R.id.btnAtras -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                finish()
                 true
             }
 

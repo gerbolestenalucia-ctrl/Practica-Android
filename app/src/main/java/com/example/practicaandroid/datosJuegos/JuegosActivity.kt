@@ -29,6 +29,12 @@ class JuegosActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<ImageView>(R.id.irLightsOut).setOnClickListener {
+            val intent = Intent(this, LightsOut::class.java)
+            startActivity(intent)
+        }
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -48,8 +54,7 @@ class JuegosActivity : AppCompatActivity() {
         val idBoton = item.itemId
         return when (idBoton) {
             R.id.btnAtras -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                finish()
                 true
             }
 

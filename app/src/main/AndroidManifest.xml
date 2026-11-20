@@ -53,6 +53,10 @@
             android:name=".datosJuegos.Dados"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".datosJuegos.LightsOut"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

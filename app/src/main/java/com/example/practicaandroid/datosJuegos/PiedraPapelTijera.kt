@@ -119,8 +119,7 @@ class PiedraPapelTijera : AppCompatActivity() {
         val idBoton = item.itemId
         return when (idBoton) {
             R.id.btnAtras -> {
-                val intent = Intent(this, JuegosActivity::class.java)
-                startActivity(intent)
+                finish()
                 true
             }
 

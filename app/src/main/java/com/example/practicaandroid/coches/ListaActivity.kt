@@ -59,8 +59,7 @@ class ListaActivity : AppCompatActivity() {
                 true
             }
             R.id.añadirSalir -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                finish()
                 true
             }
             else -> super.onOptionsItemSelected(item)

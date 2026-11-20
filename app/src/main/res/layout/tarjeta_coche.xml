@@ -4,7 +4,8 @@
     android:id="@+id/base_tarjeta"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:background="@color/lightblue">
 
     <ImageView
         android:id="@+id/icono_pequenno"

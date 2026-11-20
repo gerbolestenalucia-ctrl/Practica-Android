@@ -4,22 +4,22 @@
 
     <item
         android:id="@+id/btnMenuAñadir"
-        android:icon="@drawable/mas"
+        android:icon="@android:drawable/ic_menu_add"
         android:title="Añadir"
         app:showAsAction="always" />
     <item
         android:id="@+id/btnMenuEditar"
-        android:icon="@drawable/editar"
+        android:icon="@android:drawable/ic_menu_edit"
         android:title="Editar"
         app:showAsAction="always" />
     <item
         android:id="@+id/btnEliminarCoche"
-        android:icon="@drawable/eliminar"
+        android:icon="@android:drawable/ic_menu_delete"
         android:title="Eliminar"
         app:showAsAction="always" />
     <item
         android:id="@+id/btnSalir"
-        android:icon="@drawable/atras"
+        android:icon="@android:drawable/ic_menu_revert"
         android:title="Atras"
         app:showAsAction="always" />
 </menu>

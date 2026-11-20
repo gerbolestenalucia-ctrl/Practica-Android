@@ -5,19 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF7F2"
+    android:background="@color/lightblue"
     tools:context=".datosJuegos.PiedraPapelTijera">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarJuegoPPT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgPapel"
@@ -123,7 +123,7 @@
         android:id="@+id/linearLayoutJuego"
         android:layout_width="0dp"
         android:layout_height="230dp"
-        android:background="#FAF7F2"
+        android:background="@color/lightblue"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

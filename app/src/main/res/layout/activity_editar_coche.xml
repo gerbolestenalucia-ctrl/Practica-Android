@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/lightblue"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="16dp">
@@ -18,7 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="@color/blue"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
@@ -112,6 +113,7 @@
             android:id="@+id/buttonGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
             android:text="Guardar" />
     </LinearLayout>
 
